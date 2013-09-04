@@ -1,0 +1,18 @@
+[user]
+    name = MOON_CLJ
+    email = lijunli2598@gmail.com
+[core]
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = /usr/local/bin/vim
+[color]
+    ui = auto
+    diff = auto
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    ca = commit -a
+    st = status
+    sb = status -sb
+    di = diff
