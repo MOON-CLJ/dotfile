@@ -27,7 +27,6 @@ set showmatch
 set incsearch
 set hlsearch
 
-" C/C++
-autocmd FileType c setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-autocmd FileType cpp setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-let c_no_curly_error=1
+let g:pymode_lint_ignore = "E501,E126"
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
