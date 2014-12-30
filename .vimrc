@@ -1,6 +1,6 @@
-" Pathogen load
 filetype off
 
+" Pathogen load
 call pathogen#infect()
 call pathogen#helptags()
 
