@@ -44,3 +44,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+nnoremap <leader>jdf :YcmCompleter GoToDefinition
+nnoremap <leader>jdc :YcmCompleter GoToDeclaration
