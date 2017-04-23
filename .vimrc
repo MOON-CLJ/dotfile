@@ -4,9 +4,13 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'klen/python-mode'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 " Pathogen load
@@ -35,6 +39,8 @@ set smartindent
 set showmatch
 set incsearch
 set hlsearch
+
+vnoremap // y/<C-R>"<CR>
 
 let g:pymode_lint_ignore = "E501,E126"
 
