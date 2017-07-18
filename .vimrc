@@ -10,7 +10,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'klen/python-mode'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jnwhiteh/vim-golang'
+Plugin 'fatih/vim-go'
 call vundle#end()
 
 " Pathogen load
