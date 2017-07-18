@@ -7,10 +7,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'godlygeek/tabular'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'klen/python-mode'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jnwhiteh/vim-golang'
 call vundle#end()
 
 " Pathogen load
@@ -43,14 +43,6 @@ set hlsearch
 vnoremap // y/<C-R>"<CR>
 
 let g:pymode_lint_ignore = "E501,E126"
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/venv/*
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
 
 nnoremap <leader>jdf :YcmCompleter GoToDefinition
 nnoremap <leader>jdc :YcmCompleter GoToDeclaration
