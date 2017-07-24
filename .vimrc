@@ -42,7 +42,5 @@ set hlsearch
 
 vnoremap // y/<C-R>"<CR>
 
-let g:pymode_lint_ignore = "E501,E126"
-
 nnoremap <leader>jdf :YcmCompleter GoToDefinition
 nnoremap <leader>jdc :YcmCompleter GoToDeclaration
