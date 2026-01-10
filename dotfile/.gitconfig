@@ -1,6 +1,3 @@
-[user]
-    name = MOON_CLJ
-    email = lijunli2598@gmail.com
 [core]
     excludesfile = ~/.gitignore
     autocrlf = input
