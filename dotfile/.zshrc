@@ -1,3 +1,22 @@
+# ==============================================
+# 环境配置
+# ==============================================
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Go
+export PATH=$PATH:$(go env GOPATH)/bin
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# ==============================================
 # ls 颜色配置（macOS）
 export CLICOLOR=1
 export LSCOLORS=ExGxBxDxCxEgEdabagaced  # 目录蓝色加粗，链接紫色等
