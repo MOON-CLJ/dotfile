@@ -31,3 +31,34 @@ alias ll='ls -Al'              # 详细列表 + 隐藏文件
 alias ls='ls -hF -G'           # human readable + 类型标记 + 颜色
 alias lr='ls -lR'              # 递归
 alias lm='la |more'            # 管道给 more
+
+# ==============================================
+# Claude Code 快捷命令
+# ==============================================
+cc-kimi-k2() {
+    export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic
+    export ANTHROPIC_AUTH_TOKEN=xx
+    export ANTHROPIC_MODEL=kimi-k2-thinking-turbo
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=kimi-k2-thinking-turbo
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2-thinking-turbo
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2-thinking-turbo
+    export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2-thinking-turbo
+    claude
+}
+
+cc-kimi-k25() {
+    export ANTHROPIC_BASE_URL=https://api.moonshot.cn/anthropic
+    export ANTHROPIC_AUTH_TOKEN=xx
+    export ANTHROPIC_MODEL=kimi-k2.5
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=kimi-k2.5
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2.5
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2.5
+    export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2.5
+    claude
+}
+
+cc-zhipu() {
+    export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
+    export ANTHROPIC_AUTH_TOKEN=xxx
+    claude
+}
