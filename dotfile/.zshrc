@@ -43,7 +43,7 @@ cc-kimi-k2() {
     export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2-thinking-turbo
     export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2-thinking-turbo
     export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2-thinking-turbo
-    claude
+    claude "$@"
 }
 
 cc-kimi-k25() {
@@ -54,11 +54,17 @@ cc-kimi-k25() {
     export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2.5
     export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2.5
     export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2.5
-    claude
+    claude "$@"
+}
+
+cc-kimi-code() {
+    export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
+    export ANTHROPIC_AUTH_TOKEN=yy
+    claude "$@"
 }
 
 cc-zhipu() {
     export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
     export ANTHROPIC_AUTH_TOKEN=xxx
-    claude
+    claude "$@"
 }
