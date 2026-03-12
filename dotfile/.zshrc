@@ -8,6 +8,9 @@ eval "$(direnv hook zsh)"
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
 
+# PyCharm
+export PATH="/Applications/PyCharm.app/Contents/MacOS:$PATH"
+
 # Go
 export PATH=$PATH:$(go env GOPATH)/bin
 
@@ -43,6 +46,7 @@ cc-kimi-k2() {
     export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2-thinking-turbo
     export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2-thinking-turbo
     export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2-thinking-turbo
+    export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
     claude "$@"
 }
 
@@ -54,17 +58,32 @@ cc-kimi-k25() {
     export ANTHROPIC_DEFAULT_SONNET_MODEL=kimi-k2.5
     export ANTHROPIC_DEFAULT_HAIKU_MODEL=kimi-k2.5
     export CLAUDE_CODE_SUBAGENT_MODEL=kimi-k2.5
+    export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
     claude "$@"
 }
 
 cc-kimi-code() {
     export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
     export ANTHROPIC_AUTH_TOKEN=yy
+    export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
+    claude "$@"
+}
+
+cc-zhipu-glm5() {
+    export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
+    export ANTHROPIC_AUTH_TOKEN=xx
+    export ANTHROPIC_MODEL=GLM-5
+    export ANTHROPIC_DEFAULT_OPUS_MODEL=GLM-5
+    export ANTHROPIC_DEFAULT_SONNET_MODEL=GLM-5
+    export ANTHROPIC_DEFAULT_HAIKU_MODEL=GLM-5
+    export CLAUDE_CODE_SUBAGENT_MODEL=GLM-5
+    export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
     claude "$@"
 }
 
 cc-zhipu() {
     export ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
     export ANTHROPIC_AUTH_TOKEN=xxx
+    export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
     claude "$@"
 }
